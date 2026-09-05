@@ -1,0 +1,14 @@
+﻿{
+    "name": "SMI Sembako",
+    "short_name": "SMI Sembako",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4F46E5",
+    "description": "Smart Retail Management for Local Businesses",
+    "icons": [
+        { "src": "/images/logo.png", "sizes": "192x192", "type": "image/png" },
+        { "src": "/images/logo.png", "sizes": "512x512", "type": "image/png" }
+    ]
+}

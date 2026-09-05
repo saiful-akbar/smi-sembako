@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+    Options -Indexes
+    RewriteEngine On
+
+    # If your cPanel document root points to the project root (not /public),
+    # this will forward all web requests to the Laravel /public directory.
+
+    # Block direct access to sensitive files
+    RewriteRule ^\.env - [F,L]
+    RewriteRule ^vendor/ - [F,L]
+    RewriteRule ^storage/ - [F,L]
+    RewriteRule ^composer\.(json|lock)$ - [F,L]
+    RewriteRule ^artisan$ - [F,L]
+
+    # Skip existing files/directories in the root first
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ public/%{REQUEST_URI} [L]
+
+    # Fallback to public/index.php
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^ public/index.php [L]
+</IfModule>
+
