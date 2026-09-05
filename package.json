@@ -6,11 +6,11 @@
         "dev": "vite"
     },
     "devDependencies": {
-        "autoprefixer": "^10.4.21",
+        "autoprefixer": "^10.5.5",
         "axios": "^1.6.4",
         "laravel-vite-plugin": "^1.0.0",
-        "postcss": "^8.5.6",
-        "tailwindcss": "^4.3.3",
+        "postcss": "^8.5.28",
+        "tailwindcss": "^3.4.17",
         "vite": "^5.0.0"
     },
     "name": "pos-umkm",
@@ -21,7 +21,6 @@
         "test": "tests"
     },
     "dependencies": {
-        "@tailwindcss/vite": "^4.3.3",
         "asynckit": "^0.4.0",
         "call-bind-apply-helpers": "^1.0.2",
         "combined-stream": "^1.0.8",

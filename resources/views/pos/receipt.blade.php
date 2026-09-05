@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo.png') }}">
+
     <title>Struk Pembayaran - {{ $sale->code }}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    {{-- CSS & JS --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="bg-gray-100 p-4">
@@ -72,8 +77,8 @@
                 <div class="flex justify-between text-sm mb-2">
                     <div class="flex-1">
                         <p class="font-medium">{{ $item->product->name }}</p>
-                        <p class="text-gray-500">{{ $item->qty }} x Rp
-                            {{ number_format($item->unit_price, 0, ',', '.') }}</p>
+                        <p class="text-gray-500">
+                            {{ $item->qty }} {{ ucwords(strtolower($item->product->unit)) }} x Rp {{ number_format($item->unit_price, 0, ',', '.') }}</p>
                     </div>
                     <p class="font-medium">Rp {{ number_format($item->line_total, 0, ',', '.') }}</p>
                 </div>
